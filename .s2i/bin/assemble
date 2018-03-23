@@ -106,6 +106,12 @@ if [ -d $LOCAL_SOURCE_DIR/modules ]; then
   cp -vr $LOCAL_SOURCE_DIR/modules/* $JBOSS_HOME/modules/
 fi
 
+if [ -d $LOCAL_SOURCE_DIR/extensions ]; then
+  echo "Copying extensions from project..."
+  cp -vr $LOCAL_SOURCE_DIR/extensions/* $JBOSS_HOME/extensions/
+fi
+
+
 function copy_injected {
   source_dir=$1
   target_dir=$2
